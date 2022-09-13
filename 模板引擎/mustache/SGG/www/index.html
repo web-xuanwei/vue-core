@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="/xuni/bundle.js"></script>
+    <script type="text/template" id="temp">
+        <div>
+            <ol>
+                {{#students}}
+                <li>
+                    学生{{item.name}}的爱好是
+                    <ol>
+                        {{#item.hobbies}}
+                        <li>{{.}}</li>
+                        {{/item.hobbies}}
+                    </ol>
+                </li>
+                {{/students}}
+            </ol>
+        </div>
+    </script>
+    <script>
+        var tempStr = document.querySelector("#temp").innerHTML;
+
+        var data = {};
+
+        BUG_template.render(tempStr, data);
+    </script>
+</body>
+</html>
