@@ -1,4 +1,5 @@
 import parseTemplateToTokens from "./parseTempIntoTokens";
+import renderTemplate from "./renderTemplate"
 /**
  * 
  * 基本思路可以这么理解：
@@ -8,6 +9,6 @@ import parseTemplateToTokens from "./parseTempIntoTokens";
 window.BUG_template = {
     render(templateStr, data){
         var tokens = parseTemplateToTokens(templateStr);
-        console.log(tokens);
+        var domStr = renderTemplate(tokens, data);
     }
 }

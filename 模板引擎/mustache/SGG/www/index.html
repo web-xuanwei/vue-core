@@ -28,7 +28,13 @@
     <script>
         var tempStr = document.querySelector("#temp").innerHTML;
 
-        var data = {};
+        var data = {
+            students:[
+                {name:'张三', hobbies:['英雄联盟', '王者荣耀']},
+                {name:'李四', hobbies:['毒奶粉', '天龙八部', '天涯明月刀']},
+                {name:'王五', hobbies:['吃鸡', '屁股']},
+            ]
+        };
 
         BUG_template.render(tempStr, data);
     </script>

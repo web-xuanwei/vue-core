@@ -1,4 +1,5 @@
 import Scanner from "./Scanner"
+import nestTokens from "./nestTokens";
 
 export default function parseTemplateToTokens(tempStr) {
   var tokens = [];
@@ -27,5 +28,5 @@ export default function parseTemplateToTokens(tempStr) {
     scanner.scan("}}");
   }
 
-  return tokens;
+  return nestTokens(tokens);
 }
