@@ -14,11 +14,11 @@
             <ol>
                 {{#students}}
                 <li>
-                    学生{{item.name}}的爱好是
+                    学生{{name}}的爱好是
                     <ol>
-                        {{#item.hobbies}}
+                        {{#hobbies}}
                         <li>{{.}}</li>
-                        {{/item.hobbies}}
+                        {{/hobbies}}
                     </ol>
                 </li>
                 {{/students}}
@@ -35,6 +35,17 @@
                 {name:'王五', hobbies:['吃鸡', '屁股']},
             ]
         };
+
+        // var tempStr = `我爱{{somebody}},{{somebody}}也爱我,我考了{{a.b.c}}分`;
+
+        // var data = {
+        //     somebody: '大铁牛',
+        //     a:{
+        //         b:{
+        //             c: 10
+        //         }
+        //     }
+        // }
 
         BUG_template.render(tempStr, data);
     </script>

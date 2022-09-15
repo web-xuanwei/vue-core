@@ -9,6 +9,8 @@ import renderTemplate from "./renderTemplate"
 window.BUG_template = {
     render(templateStr, data){
         var tokens = parseTemplateToTokens(templateStr);
+        console.log(tokens);
         var domStr = renderTemplate(tokens, data);
+        console.log(domStr);
     }
 }
